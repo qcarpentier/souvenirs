@@ -6,7 +6,7 @@ import FileBase from "react-file-base64";
 import useStyles from "./styles";
 import { createPost } from "../../actions/posts";
 
-const Form = () => {
+const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
