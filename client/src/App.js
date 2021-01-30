@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from 'react';
+import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
 
-import { getPosts } from "./actions/posts";
-import Form from "./components/Form/Form";
-import Posts from "./components/Posts/Posts";
-import souvenirs from "./images/souvenirs.png";
-import useStyles from "./styles";
+import { getPosts } from './actions/posts';
+import Form from './components/Form/Form';
+import Posts from './components/Posts/Posts';
+import souvenirs from './images/souvenirs.png';
+import useStyles from './styles';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(null);
@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getPosts());
-  }, [dispatch]);
+  }, [currentId, dispatch]);
 
   return (
     <Container maxwidth="lg">
